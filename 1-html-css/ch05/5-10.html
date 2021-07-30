@@ -1,0 +1,80 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    .containal {
+      display: flex;
+      margin: 20px 0px;
+      padding: 10px;
+      border: 1px solid red;
+    }
+
+    .containal.end {
+      justify-content: flex-end;
+      /* flex-direction: row-reverse; */
+    }
+
+    .containal.center {
+      justify-content: center;
+    }
+
+    .containal.between {
+      justify-content: space-between;
+    }
+
+    .containal.around {
+      justify-content: space-around;
+    }
+
+    .containal.even {
+      justify-content: space-evenly;
+    }
+
+    .item {
+      border: 1px solid black;
+      flex-basis: 100px;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 기본 주측 정렬은 start부터 -->
+  <div class="containal" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <div class="containal end" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <div class="containal center" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <!--  여유공간 200px에 대해서 flex item 사이에 균등 배분-->
+  <div class="containal between" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <!--  여유공간 200px에 대해서 항목을 둘러싸고 있는 공간을 균등 배분-->
+  <div class="containal around" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+  <!-- 아이템 사이, 시작, 끝 공간이 균등 배분-->
+  <div class="containal even" style="width: 500px;">
+    <div class="item">1</div>
+    <div class="item">2</div>
+    <div class="item">3</div>
+  </div>
+</body>
+
+</html>

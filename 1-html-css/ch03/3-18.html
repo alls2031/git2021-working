@@ -1,0 +1,44 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      /* 태크크기를 쉽게 가능하게 함 */
+      box-sizing: content-box;
+    }
+
+    .box {
+      margin: 10px;
+      padding: 10px;
+      width: 250px;
+      height: 200px;
+      border: 5px solid black;
+    }
+
+    .one {
+      background-color: red;
+      /*  html 기본(default) */
+      box-sizing: content-box;
+    }
+
+    .two {
+      background-color: orange;
+      /* width/hight가 boder포함 안쪽여역의 크키 */
+      /* box-sizing: border-box; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eius quas eligendi ullam, quis
+    praesentium
+    recusandae doloribus nesciunt corrupti sit nihil debitis illo repudiandae nobis dolore consequuntur excepturi!
+    Neque, doloremque.</div>
+  <div class="box two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos eius quas eligendi ullam, quis
+    praesentium
+    recusandae doloribus nesciunt corrupti sit nihil debitis illo repudiandae nobis dolore consequuntur excepturi!
+    Neque, doloremque.</div>
+</body>
+
+</html>

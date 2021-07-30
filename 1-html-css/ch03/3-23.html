@@ -1,0 +1,35 @@
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    /* 의사 클래스 */
+    /* 의사(pseudo): 가짜인(흡사한), 같은 역할을 하는 */
+    /* 몇가지에 정해진 의사 크래스가 존제 함 */
+
+    /* 선택자 의사클래스 */
+    /* 선택자조건에 맞는 요소가 클릭될때 적용 */
+    /* 버튼 다운할떄 적용 업할때 해제 */
+    h1:active {
+      color: red;
+    }
+
+    /* hover: 마우스커서가 요소위로 올라가면 적용 */
+    h1:hover {
+      color: blue;
+
+    }
+
+    h1 {
+      /* 블럭 텍스트 단위로 색칠 안되게 하는 것 */
+      user-select: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>여기를 클릭하세요</h1>
+</body>
+
+</html>
