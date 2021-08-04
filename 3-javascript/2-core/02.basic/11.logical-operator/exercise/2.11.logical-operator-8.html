@@ -1,0 +1,15 @@
+<html>
+
+
+<body>
+  <script>
+    if (-1 || 0) alert('first');
+    // 뜸
+    if (-1 && 0) alert('second');
+    // 안 뜸
+    if (null || -1 && 1) alert('third');
+    // 뜸
+  </script>
+</body>
+
+</html>

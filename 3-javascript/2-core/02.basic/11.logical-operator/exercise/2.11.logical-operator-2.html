@@ -1,0 +1,21 @@
+<html>
+
+
+<body>
+  <script>
+    alert(alert(1) || 2 || alert(3));
+    // 1. alert(1)
+    // 2. alert(alert(1) || 2)    -> 2
+    // 3. 2 || alert(3)           -> 2
+    // 4. alert(2)     
+
+    let result1 = alert(1);                  // undefined, alert(1) 실행됨
+    let result2 = result1 || 2;              // 2
+    let result3 = result2 || alert(3);       // 2, alert(3) 실행안됨
+    alert(result3)                           // 2, alert(3) 실행
+
+
+  </script>
+</body>
+
+</html>
