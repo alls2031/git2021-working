@@ -1,0 +1,20 @@
+<html>
+
+<body>
+  <script>
+    let i = 5;
+
+    for (let j = 1; j <= 5; j++) {
+      let line = "";
+      for (let k = 1; k <= i - j; k++) {
+        line += " ";
+      }
+      for (let l = 1; l <= 2 * j - 1; l++) {
+        line += "*"
+      }
+      console.log(line);
+    }
+  </script>
+</body>
+
+</html>

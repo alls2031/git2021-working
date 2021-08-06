@@ -1,0 +1,29 @@
+<html>
+
+<body>
+  <script>
+    // Hoisting(끌어올리다)
+    // 뒤에 선언이 있고, 이전에 사용을 하면 
+    // 선언을 내부적으로 허용범위 최상단으로 끌어 올려줌
+
+    // 자바스크립트 엔진이 호이스팅한 결과
+    // function sayHi(name) {
+    // alert(`Hello, ${name}`);
+
+    // 자바스크립트 엔진이 호이스팅한 결과
+    sayHi("John"); // Hello, John
+
+    function sayHi(name) {
+      alert(`Hello, ${name}`);
+    }
+  </script>
+  <script>
+    sayHi("John"); // Hello, John
+
+    let sayHi = function (name) {
+      alert(`Hello, ${name}`);
+    };
+  </script>
+</body>
+
+</html>
