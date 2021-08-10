@@ -1,0 +1,25 @@
+<html>
+
+<body>
+  <script>
+    function sumInput() {
+      let arr = [];
+
+      while (true) {
+        let input = prompt("숫자를 입력하세요.")
+        if (isNaN(+input) || input == "" || input == null)
+          break;
+
+        arr.push(+input);
+      }
+      let sum = 0;
+      for (let elm of arr) {
+        sum += elm;
+      }
+      return sum;
+    }
+    alert(sumInput());
+  </script>
+</body>
+
+</html>

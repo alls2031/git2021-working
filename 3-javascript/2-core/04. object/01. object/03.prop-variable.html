@@ -1,0 +1,32 @@
+<html>
+
+<body>
+  <script>
+    function makeUser(name, age) {
+      let phoen = "010-123-123"
+      // return {
+      //  name: name,
+      //  age: age,
+      // ...등등
+      // };
+
+      // let user = {};
+      // user.name = name;
+      //  user.age = age;
+
+      // return user;
+
+      return {
+        name,
+        age,
+        phoen,
+        // ...등등
+      };
+    }
+
+    let user = makeUser("John", 30);
+    alert(user.name); // John
+  </script>
+</body>
+
+</html>
