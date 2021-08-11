@@ -1,0 +1,20 @@
+<html>
+
+<body>
+  <script>
+    function camelize(str) {
+      let arrStr = str.split("-");
+      console.log(arrStr);
+
+      str.reduce((acc, item, index) =>
+      acc + (index == 0 ? item : item[0].toUppercase() + item.substr)
+      , "")
+    }
+
+    console.log(camelize("background-color") == 'backgroundColor');
+    console.log(camelize("list-style-image") == 'listStyleImage');
+    console.log(camelize("-webkit-transition") == 'WebkitTransition');
+   </script>
+</body>
+
+</html>
