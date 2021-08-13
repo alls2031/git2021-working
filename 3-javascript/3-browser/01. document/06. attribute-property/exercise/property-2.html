@@ -1,0 +1,31 @@
+<html>
+
+<body>
+
+<a name="list">the list</a>
+<ul>
+  <li><a href="http://google.com">http://google.com</a></li>
+  <li><a href="/tutorial">/tutorial.html</a></li>
+  <li><a href="local/path">local/path</a></li>
+  <li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+  <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+  <li><a href="http://internal.com/test">http://internal.com/test</a></li>
+</ul>
+
+<script>
+  const links = document.querySelectorAll(" ul a ");
+
+    for (let link of links) {
+      let href = link.getAttribute('href');
+      if (!href) continue; // 속성이 존재하지 않음
+
+      if (!href.includes('://')) continue; // 프로토콜이 존재하지 않음
+
+      if (href.startsWith('http://internal.com')) continue; // 내부 링크
+
+      link.style.color = 'orange';
+    }
+</script>
+</body>
+
+</html>
