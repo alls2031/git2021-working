@@ -1,0 +1,21 @@
+<html>
+  <style>
+    textarea {
+      width: 300px;
+      height: 100px;
+    }
+  </style>
+
+ <body>
+  <textarea id="txt" placeholder="Write here"></textarea>
+
+  <button onclick="localStorage.removeItem('area');txt.value=''">Clear</button>
+  <script>
+    txt.value = localStorage.getItem('area');
+    txt.oninput = () => {
+      localStorage.setItem('area', txt.value)
+    };
+  </script>
+ </body>
+
+</html>
