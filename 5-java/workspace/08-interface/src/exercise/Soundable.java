@@ -1,0 +1,6 @@
+package exercise;
+
+public interface Soundable {
+	String sound();
+
+}
