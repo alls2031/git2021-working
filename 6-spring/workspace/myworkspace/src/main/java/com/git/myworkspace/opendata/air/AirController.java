@@ -47,6 +47,6 @@ public class AirController {
 	@GetMapping(value = "/sido/current/{city}")
 	public List<AirSigunguHour> getAireSidoCurrent(@PathVariable String city) {
 		Pageable page = PageRequest.of(0, 12, Sort.by("dataTime").descending());
-		return repo.findByCityName(page, city);
+		return repo.findBydataTime(page, city);
 	}
 }

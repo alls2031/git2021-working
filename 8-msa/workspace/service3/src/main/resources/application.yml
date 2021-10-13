@@ -1,0 +1,27 @@
+server:
+  port: 4040
+spring:
+  application:
+    name: service-3
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    hostname: localhost
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+      
+---
+spring:
+  profiles: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://ec2-3-37-96-216.ap-northeast-2.compute.amazonaws.com:8761/eureka/
+  instance:
+    hostname: ec2-3-38-115-101.ap-northeast-2.compute.amazonaws.com

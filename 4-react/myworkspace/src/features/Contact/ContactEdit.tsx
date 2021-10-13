@@ -25,7 +25,6 @@ const ContactEdit = () => {
       item.name = nameInput.current ? nameInput.current.value : "";
       item.phone = phoneInput.current ? phoneInput.current.value : "";
       item.email = emailInput.current ? emailInput.current.value : "";
-      item.memo = memoInput.current ? memoInput.current.value : "";
       item.createdTime = new Date().toLocaleTimeString();
       dispatch(modifyContact(item));
       history.push("/contacts");
@@ -71,17 +70,6 @@ const ContactEdit = () => {
                     ref={emailInput}
                     defaultValue={contactItem?.email}
                   />
-                </td>
-              </tr>
-              <tr>
-                <th>메모</th>
-                <td>
-                  <textarea
-                    className="form-control"
-                    style={{ height: "40vh" }}
-                    ref={memoInput}
-                    defaultValue={contactItem?.memo}
-                  ></textarea>
                 </td>
               </tr>
             </tbody>

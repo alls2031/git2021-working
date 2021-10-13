@@ -94,7 +94,7 @@ public class AirService {
 		System.out.println(json);
 
 		// JSON(문자열) -> Java(object)
-		AirSigunguHourResponse response = new Gson().fromJson(json, AirSigunguHourResponse.class);
+		AirSiGunGuHourResponse response = new Gson().fromJson(json, AirSiGunGuHourResponse.class);
 		System.out.println(response);
 
 //		// 강동구 데이터
@@ -104,7 +104,7 @@ public class AirService {
 
 		/* ---------------------- 응답 객체 -> 엔티티 시작 ----------------- */
 		List<AirSigunguHour> list = new ArrayList<AirSigunguHour>();
-		for (AirSigunguHourResponse.Item item : response.getResponse().getBody().getItems().getItem()) {
+		for (AirSiGunGuHourResponse.Item item : response.getResponse().getBody().getItems().getItem()) {
 			AirSigunguHour record = AirSigunguHour.builder().dataTime(item.getDataTime()).sidoName(item.getSidoName())
 					.cityName(item.getCityName()).pm10Value(Integer.valueOf(item.getPm10Value()))
 					.pm25Value(Integer.valueOf(item.getPm25Value())).build();
